@@ -1,4 +1,5 @@
 const os = require ('os') //import module
+const log1 = require ('./logger')
 
 //show free memory, memory total and free %
 
@@ -18,6 +19,7 @@ setInterval(()=> {
     console.clear()
     console.log("=== PC STATS ===")
     console.table(stats)
-
+    
+    log1(`${JSON.stringify(stats)}\n`)
 
 }, 1000)
